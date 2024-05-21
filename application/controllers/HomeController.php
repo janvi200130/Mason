@@ -26,6 +26,7 @@ class HomeController extends CI_Controller {
 	public function about_us()
 	{
 		$this->load->view('frontend/about');
+		
 	}
     public function services()
 	{

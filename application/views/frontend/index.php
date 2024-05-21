@@ -373,7 +373,7 @@
                                 <div class="sec-title03 mb-1-9">
                                     <h2 class="display-6 mb-0 lh-1 font-weight-800">Quick contact</h2>
                                 </div>
-                                <form class="contact quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
+                                <form class="contact quform" action="<?= base_url('HomeController/contactForm') ?>" method="post" enctype="multipart/form-data">
                                     <div class="quform-elements">
                                         <div class="row">
 
@@ -415,7 +415,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="phone">Contact Number</label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                                        <input class="form-control" id="phone" type="text" name="number" placeholder="Your phone here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -432,24 +432,7 @@
                                             </div>
                                             <!-- End Textarea element -->
 
-                                            <!-- Begin Captcha element -->
-                                            <div class="col-md-12">
-                                                <div class="quform-element">
-                                                    <div class="form-group">
-                                                        <div class="quform-input">
-                                                            <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="form-group">
-                                                        <div class="quform-captcha">
-                                                            <div class="quform-captcha-inner">
-                                                                <img src="quform/images/captcha/courier-new-light.png" alt="...">
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                            </div>
-                                            <!-- End Captcha element -->
+                                         
 
                                             <!-- Begin Submit button -->
                                             <div class="col-md-12">
