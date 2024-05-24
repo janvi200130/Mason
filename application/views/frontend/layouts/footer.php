@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="py-4 border-top border-color-light-white">
-        <div class="container text-center">
+        <div class="container text-center text-light">
              © Created by me:- &nbsp;<a target="_blank" href="https://raysitworld.com/" class="text-light fw_400 line_height_24"> RAYS IT & DESIGN WORLD PVT. LTD.
         </div>
     </div>

@@ -123,56 +123,7 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS
-        ================================================== -->
-        <section>
-            <div class="container position-relative z-index-1">
-
-                <div class="sec-title01 w-md-80 w-lg-50 text-center mx-auto mb-5">
-                    <h1>Testimonials</h1>
-                    <span>Love Your Customers</span>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <div class="testimonial-style2 owl-carousel owl-theme" data-slider-id="1">
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-4 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">I don't know what else to say. I would gladly pay over 600 dollars for business. Keep up the excellent work. It's incredible. It's the perfect solution for our business.</p>
-                                <h6 class="mb-0">Allena Jones</h6>
-                                <span class="small">Real Estate Assessor</span>
-
-                            </div>
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-3 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">I am really satisfied with my business. Your company is truly upstanding and is behind its product 100%. Thank you for making it painless, pleasant and most of all hassle free!</p>
-                                <h6 class="mb-0">Gregi Ambrose</h6>
-                                <span class="small">Languages Researcher</span>
-                            </div>
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-3 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">Thanks to business, we've just launched our 5th website! Thank you so much for your help. I don't always clop, but when I do, it's because of business.</p>
-                                <h6 class="mb-0">Jose Matsuda</h6>
-                                <span class="small">Mystery Shopper</span>
-                            </div>
-                        </div>
-                        <div class="owl-thumbs text-center mt-2-3" data-slider-id="1">
-                            <button class="owl-thumb-item rounded-circle w-60px me-2"><img src="<?=base_url();?>assets/img/avatars/avatar-05.jpg" class="rounded-circle" alt="..."></button>
-                            <button class="owl-thumb-item w-60px rounded-circle me-2"><img src="<?=base_url();?>assets/img/avatars/avatar-06.jpg" class="rounded-circle" alt="..."></button>
-                            <button class="owl-thumb-item w-60px rounded-circle"><img src="<?=base_url();?>assets/img/avatars/avatar-07.jpg" class="rounded-circle" alt="..."></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div>
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-09.png" class="position-absolute bottom-15 left d-none d-lg-block rounded-circle" alt="...">
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-08.png" class="position-absolute top-20 right d-none d-lg-block rounded-circle" alt="...">
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-10.png" class="position-absolute left-15 top-10 d-none d-lg-block rounded-circle" alt="...">
-                </div> -->
-
-            </div>
-            
-        </section>
+  
 
     <?php include('layouts/footer.php')?>
         

@@ -22,46 +22,14 @@
         <section class="contact-style02">
             <div class="container">
                 <div class="row">
-                    <!-- <div class="col-lg-5 col-xl-4">
-                        <div>
-                            <div class="d-flex primary-shadow p-1-6 p-sm-1-9 mb-1-6 contact-box">
-                                <div class="flex-shrink-0 me-3">
-                                    <i class="ti-location-pin icon"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h4 class="h5">Location</h4>
-                                    <span>66 Guild Street 512B, Great North Town.</span>
-                                </div>
-                            </div>
-                            <div class="d-flex primary-shadow p-1-6 p-sm-1-9 mb-1-6 contact-box">
-                                <div class="flex-shrink-0 me-3">
-                                    <i class="ti-mobile icon"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h4 class="h5">Phone Number</h4>
-                                    <span class="d-block">(+44) 123 456 789</span>
-                                    <span>(+1) 234-567-9874</span>
-                                </div>
-                            </div>
-                            <div class="d-flex primary-shadow p-1-6 p-sm-1-9 mb-1-6 contact-box">
-                                <div class="flex-shrink-0 me-3">
-                                    <i class="ti-email icon"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h4 class="h5">Email Address</h4>
-                                    <span class="d-block">example@yourdomain.com</span>
-                                    <span>info@yourdomain.com</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+              
                     <div class="col-md-12 col-lg-12 col-xl-12">
                         <div class="ps-lg-4">
                             <div class="primary-shadow p-1-9 p-md-5">
                                 <div class="sec-title03 mb-1-9">
                                     <h2 class="display-6 mb-0 lh-1 font-weight-800">Quick Enquiry</h2>
                                 </div>
-                                <form class="contact quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
+                                <form class="contact " action="<?= base_url('save-enquiry') ?>" method="post" enctype="multipart/form-data" onclick="">
                                     <div class="quform-elements">
                                         <div class="row">
 
@@ -120,31 +88,14 @@
                                             </div>
                                             <!-- End Textarea element -->
 
-                                            <!-- Begin Captcha element -->
-                                            <div class="col-md-12">
-                                                <div class="quform-element">
-                                                    <div class="form-group">
-                                                        <div class="quform-input">
-                                                            <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="form-group">
-                                                        <div class="quform-captcha">
-                                                            <div class="quform-captcha-inner">
-                                                                <img src="</?=base_url();?>assets/images/captcha/courier-new-light.png" alt="...">
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                            </div>
-                                            <!-- End Captcha element -->
+                                     
 
                                             <!-- Begin Submit button -->
                                             <div class="col-md-12">
                                                 <div class="quform-submit-inner">
                                                     <button class="butn md" type="submit"><span>Send Message</span></button>
                                                 </div>
-                                                <div class="quform-loading-wrap text-start"><span class="quform-loading"></span></div>
+                                            
                                             </div>
                                             <!-- End Submit button -->
 
@@ -158,11 +109,7 @@
             </div>
         </section>
 
-        <!-- MAP
-        ================================================== -->
-        <div class="container">
-            <iframe class="contact-map border-radius-5" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-        </div><br>
+    
 
     <?php include('layouts/footer.php')?>
         

@@ -16,7 +16,7 @@
         <section class="py-0 mx-lg-1-6 mx-xl-2-5 mx-xxl-2-9">
             <div class="slider-fade1 owl-carousel owl-theme w-100">
 
-                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10 h-100" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/download.jpg">
+                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10 h-100" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/manufacturing.jpg">
                     <div class="container position-relative z-index-9 py-6">
                         <div class="row align-items-center">
                             <div class="col-lg-10 col-xl-9 col-xxl-8">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/download.jpg">
+                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/sales.jpg">
                     <div class="container position-relative z-index-9 py-6">
                         <div class="row align-items-center">
                             <div class="col-lg-10 col-xl-9 col-xxl-8">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/download.jpg">
+                <div class="item bg-img cover-background pt-14 pb-22 py-sm-18 py-lg-20 py-xl-24 left-overlay-dark border-lg-radius-10" data-overlay-dark="9" data-background="<?=base_url();?>assets/img/banner/technology.jpg">
                     <div class="container position-relative z-index-9 py-6">
                         <div class="row align-items-center">
                             <div class="col-lg-10 col-xl-9 col-xxl-8">
@@ -237,60 +237,11 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS
-        ================================================== -->
-        <section>
-            <div class="container position-relative z-index-1">
-
-                <div class="sec-title01 w-md-80 w-lg-50 text-center mx-auto mb-5">
-                    <h1>Testimonials</h1>
-                    <span>Love Your Customers</span>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <div class="testimonial-style2 owl-carousel owl-theme" data-slider-id="1">
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-4 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">I don't know what else to say. I would gladly pay over 600 dollars for business. Keep up the excellent work. It's incredible. It's the perfect solution for our business.</p>
-                                <h6 class="mb-0">Allena Jones</h6>
-                                <span class="small">Real Estate Assessor</span>
-
-                            </div>
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-3 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">I am really satisfied with my business. Your company is truly upstanding and is behind its product 100%. Thank you for making it painless, pleasant and most of all hassle free!</p>
-                                <h6 class="mb-0">Gregi Ambrose</h6>
-                                <span class="small">Languages Researcher</span>
-                            </div>
-                            <div>
-                                <i class="ti-quote-left display-10 text-primary mb-3 d-block"></i>
-                                <p class="mb-1-9 display-28 display-md-26 display-lg-24">Thanks to business, we've just launched our 5th website! Thank you so much for your help. I don't always clop, but when I do, it's because of business.</p>
-                                <h6 class="mb-0">Jose Matsuda</h6>
-                                <span class="small">Mystery Shopper</span>
-                            </div>
-                        </div>
-                        <div class="owl-thumbs text-center mt-2-3" data-slider-id="1">
-                            <button class="owl-thumb-item rounded-circle w-60px me-2"><img src="<?=base_url();?>assets/img/avatars/avatar-05.jpg" class="rounded-circle" alt="..."></button>
-                            <button class="owl-thumb-item w-60px rounded-circle me-2"><img src="<?=base_url();?>assets/img/avatars/avatar-06.jpg" class="rounded-circle" alt="..."></button>
-                            <button class="owl-thumb-item w-60px rounded-circle"><img src="<?=base_url();?>assets/img/avatars/avatar-07.jpg" class="rounded-circle" alt="..."></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div>
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-09.png" class="position-absolute bottom-15 left d-none d-lg-block rounded-circle" alt="...">
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-08.png" class="position-absolute top-20 right d-none d-lg-block rounded-circle" alt="...">
-                    <img src="</?=base_url();?>assets/img/avatars/avatar-10.png" class="position-absolute left-15 top-10 d-none d-lg-block rounded-circle" alt="...">
-                </div> -->
-
-            </div>
-            
-        </section>
+    
 
         <!-- CLIENTS
         ================================================== -->
-        <section class="py-5 bg-secondary mx-lg-6 rounded-lg">
+        <!-- <section class="py-5 bg-secondary mx-lg-6 rounded-lg">
             <div class="container-fluid px-sm-14">
                 <div class="owl-carousel owl-theme client-style02 text-center">
                     <div class="image-wrapper">
@@ -327,7 +278,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
     <!-- CONTACT DETAILS
         ================================================== -->
@@ -371,11 +322,28 @@
                         <div class="ps-lg-4">
                             <div class="primary-shadow p-1-9 p-md-5">
                                 <div class="sec-title03 mb-1-9">
-                                    <h2 class="display-6 mb-0 lh-1 font-weight-800">Quick contact</h2>
+                                    <h2 class="display-6 mb-0 lh-1 font-weight-800">Contact Us</h2>
                                 </div>
-                                <form class="contact quform" action="<?= base_url('HomeController/contactForm') ?>" method="post" enctype="multipart/form-data">
+                                <form class="contact" action="<?= base_url('save-contact') ?>" method="post" enctype="multipart/form-data">
                                     <div class="quform-elements">
                                         <div class="row">
+
+										<?php
+									if ($this->session->flashdata('success')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('success'); ?>
+										</div>
+									<?php } ?>
+
+									<?php
+									if ($this->session->flashdata('error')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('error'); ?>
+										</div>
+									<?php } ?>
+
 
                                             <!-- Begin Text input element -->
                                             <div class="col-md-6">
@@ -415,10 +383,11 @@
                                                 <div class="quform-element form-group">
                                                     <label for="phone">Contact Number</label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="phone" type="text" name="number" placeholder="Your phone here" />
+                                                        <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
                                                     </div>
                                                 </div>
                                             </div>
+											<input type="hidden" name="indexForm" value="1" id="">
                                             <!-- End Text input element -->
 
                                             <!-- Begin Textarea element -->

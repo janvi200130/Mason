@@ -86,14 +86,19 @@
                                     <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
                                         <li>
                                             <a href="<?=base_url('/')?>">Home</a>
-                                            <!-- <ul>
-                                                <li><a href="index.html">Home 01</a></li>
-                                                <li><a href="index-02.html">Home 02</a></li>
-                                                <li><a href="index-03.html">Home 03</a></li>
-                                            </ul> -->
+                                           
                                         </li>
                                         <li><a href="<?=base_url('about')?>">About Us</a></li>
-                                        <li><a href="<?=base_url('service')?>">Services</a></li>
+                                        <li>
+											<a href="<?= base_url('service') ?>">Services</a>
+									
+											<!-- <ul>
+                                                <li><a href="<?=base_url('technology')?>">Technology</a></li>
+                                                <li><a href="<?=base_url('manufacturing')?>">Manufacturing</a></li>
+                                                <li><a href="<?=base_url('sales')?>">Sales</a></li>
+                                            </ul> -->
+
+									</li>
                                         <li><a href="<?=base_url('enquiry')?>">Quick Enquiry</a></li>
                                         <li><a href="<?=base_url('career')?>">Career</a></li>
                                         <li><a href="<?=base_url('contact')?>">Contact Us</a></li>

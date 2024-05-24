@@ -11,6 +11,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['/']='HomeController/index';
 $route['about']='HomeController/about_us';
 $route['service']='HomeController/services';
+$route['technology']='HomeController/technology';
+$route['manufacturing']='HomeController/manufacturing';
+$route['sales']='HomeController/sales';
 $route['enquiry']='HomeController/enquiries';
 $route['career']='HomeController/careers';
 $route['faq']='HomeController/faqs';
@@ -19,9 +22,18 @@ $route['term']='HomeController/term_condition';
 $route['policy']='HomeController/privacy';
 
 
+// stores fronted form data
+
+$route['save-enquiry']='HomeController/save_enquiry';
+$route['save-contact']='HomeController/save_contact';
+
+
 // Backend Routes 
-$route['login']='AdminController/login';
-$route['admin']='AdminController/index';
+$route['login']='LoginController/index';
+$route['admin']='LoginController/index';
+$route['auth'] = 'LoginController/auth';
+
+$route['admin/dashboard']='AdminController/index';
 $route['admin/about']='AdminController/about';
 
 // contact
@@ -36,7 +48,5 @@ $route['admin/deleteEnquiry']='AdminController/deleteEnquiry';
 $route['admin/career']='AdminController/career';
 $route['admin/deleteCareer']='AdminController/deleteCareer';
 
-$route['admin']='AdminController/index';
-$route['admin']='AdminController/index';
-$route['admin']='AdminController/index';
 
+$route['admin/settings']='AdminController/settings';

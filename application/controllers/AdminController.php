@@ -5,21 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class AdminController extends CI_Controller
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
+
 	public function index()
 	{
 		$this->load->view('backend/index');
@@ -59,7 +45,7 @@ class AdminController extends CI_Controller
 		$table = 'careers';
 		$data['records'] = $this->Admin_model->getAllRecords($table);
 
-		$this->load->view('backend/career',$data);
+		$this->load->view('backend/career', $data);
 	}
 
 	public function deleteCareer()
@@ -82,7 +68,7 @@ class AdminController extends CI_Controller
 		$table = 'enquires';
 		$data['records'] = $this->Admin_model->getAllRecords($table);
 
-		$this->load->view('backend/enquiry',$data);
+		$this->load->view('backend/enquiry', $data);
 	}
 
 	public function deleteEnquiry()
@@ -108,5 +94,14 @@ class AdminController extends CI_Controller
 	public function service_list()
 	{
 		$this->load->view('backend/index');
+	}
+
+	public function settings()
+	{
+
+		$id = 1;
+		$table = 'website_settings';
+		$data['records'] = $this->Admin_model->getRecordById($id, $table);
+		$this->load->view('backend/website_settings',$data);
 	}
 }
