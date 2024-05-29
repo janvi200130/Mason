@@ -10,12 +10,53 @@ class LoginController extends CI_Controller
 	{
 	// 	 echo password_hash('admin',PASSWORD_DEFAULT);
 
-		$this->load->view('backend/login');
+		// Load the CAPTCHA helper
+		$this->load->helper('captcha');
+
+		$word = rand(1000, 9999);
+
+		// CAPTCHA configuration
+		$vals = array(
+			'word'          => $word,
+			'img_path'      => 'captcha_img/',
+			'img_url'       => base_url() . 'captcha_img',
+			'img_width'     => '100',
+			'img_height'    => '50',
+			'expiration'    => '7200',
+
+		);
+
+		$cap = create_captcha($vals);
+		$this->session->set_userdata('captcha', $cap['word']);
+	
+
+		$this->load->view('backend/login',$cap);
 	}
 
 
 	public function auth()
 	{
+
+			// Load the CAPTCHA helper
+			$this->load->helper('captcha');
+
+			$word = rand(1000, 9999);
+	
+			// CAPTCHA configuration
+			$vals = array(
+				'word'          => $word,
+				'img_path'      => 'captcha_img/',
+				'img_url'       => base_url() . 'captcha_img',
+				'img_width'     => '100',
+				'img_height'    => '50',
+				'expiration'    => '7200',
+	
+			);
+	
+			$cap = create_captcha($vals);
+			$this->session->set_userdata('captcha', $cap['word']);
+
+
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -41,15 +82,15 @@ class LoginController extends CI_Controller
 				} else {
 					// incorrect password
 					$this->session->set_flashdata('msg', 'Enter correct password ');
-					$this->load->view('backend/login');
+					$this->load->view('backend/login',$cap);
 				}
 			} else {
 				$this->session->set_flashdata('msg', 'Enter correct username');
-				$this->load->view('backend/login');
+				$this->load->view('backend/login',$cap);
 			}
 		} else {
 			// form errors
-			$this->load->view('backend/login');
+			$this->load->view('backend/login',$cap);
 			// redirect(base_url('/login'));
 		}
 	}

@@ -36,6 +36,23 @@ $route['auth'] = 'LoginController/auth';
 $route['admin/dashboard']='AdminController/index';
 $route['admin/about']='AdminController/about';
 
+// profile
+$route['admin/profile']='AdminController/profile';
+
+
+
+// faq
+$route['admin/add-faq']='AdminController/add_faq';
+$route['admin/faq']='AdminController/faq';
+$route['admin/save-faq']='AdminController/saveFaq';
+$route['admin/deleteFaq']='AdminController/deleteFaq';
+
+// slider
+// $route['admin/slider']='AdminController/add_slider';
+$route['admin/slider']='AdminController/slider';
+$route['admin/add-slider']='AdminController/addSlider';
+$route['admin/deleteSlider']='AdminController/deleteSlider';
+
 // contact
 $route['admin/contact']='AdminController/contact';
 $route['admin/deleteContact']='AdminController/deleteContact';
@@ -50,3 +67,4 @@ $route['admin/deleteCareer']='AdminController/deleteCareer';
 
 
 $route['admin/settings']='AdminController/settings';
+$route['admin/edit-setting']='AdminController/edit_setting';

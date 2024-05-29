@@ -441,76 +441,22 @@
                     <div class="col-lg-10">
                         <div>
                             <div id="accordion" class="accordion-style1">
+								<?php $i=1; foreach($faqs as $record){ ?>
                                 <div class="card mb-2">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                1. How might I buy this template ?
+                                            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapse<?= $i ?>" aria-expanded="true" aria-controls="collapse<?= $i ?>">
+                                                <?= $i ?>. <?= $record->question ?>
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                    <div id="collapse<?= $i ?>" class="collapse <?= ($i==1)?'show':'' ?>" aria-labelledby="headingOne" data-bs-parent="#accordion">
                                         <div class="card-body">
-                                            Tempora incidunt ut labore et dolore exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+										<?= $record->answer ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card mb-2">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                2. Are guarantees offered on the things?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            Neque porro quisquam est quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card mb-2">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                3. Am I permitted to change the thing that I bought?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card mb-2">
-                                    <div class="card-header" id="headingFour">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                4. What does the template license permit me to do?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            Neque porro quisquam est quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                5. Are you ready to buy this theme?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
-                                        <div class="card-body">
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </div>
-                                    </div>
-                                </div>
+                               <?php $i++;} ?>
                             </div>
                         </div>
                     </div>

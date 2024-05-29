@@ -19,6 +19,8 @@ class Admin_model extends CI_Model
 	}
 
 
+
+	// get record by id
 	public function getRecordById($id,$table){
 		$this->db->where('id', $id);
 		$query = $this->db->get($table);

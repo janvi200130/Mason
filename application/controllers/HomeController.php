@@ -5,24 +5,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class HomeController extends CI_Controller
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
+
 	public function index()
 	{
-		$this->load->view('frontend/index');
+
+		$table = 'faqs';
+		$data['faqs'] = $this->Home_model->getAllRecords($table);
+
+		$this->load->view('frontend/index', $data);
 	}
 	public function about_us()
 	{
@@ -110,9 +100,9 @@ class HomeController extends CI_Controller
 		$response = $this->db->insert('contacts', $data);
 		if ($response) {
 			$this->session->set_flashdata('success', 'Successfully Submitted Form');
-			if($indexForm){
+			if ($indexForm) {
 				redirect(base_url('/'));
-			}else{
+			} else {
 				redirect(base_url('contact'));
 			}
 		} else {

@@ -10,9 +10,7 @@
 
 <body class="hold-transition sidebar-mini">
 	<div class="wrapper">
-		<nav class="main-header navbar py-4 navbar-expand navbar-white navbar-light">
 
-		</nav>
 
 		<?php include('layouts/sidebar.php') ?>
 
@@ -47,89 +45,92 @@
 										<div class="form-group row">
 											<label for="inputName" class="col-sm-2 col-form-label">Website Name</label>
 											<div class="col-sm-10">
-												<p class="form-control">
-													<?= $record->name ?>
-												</p>
+												<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputEmail" class="col-sm-2 col-form-label">Logo</label>
 											<div class="col-sm-10">
-											<!-- <img src="" alt=""> -->
-											<p>Place Image Here</p>
+												<img src="<?= $record->logo ?>" alt="">
+												<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputName2" placeholder="Email" />
+											<input class="form-control" value="<?= $record->name ?>">
+												
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number (Optional)</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputName2" placeholder="Email" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Email</label>
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="inputName2" placeholder="Email" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Email (Optional)</label>
 											<div class="col-sm-10">
-												<input type="email" class="form-control" id="inputName2" placeholder="Email" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+												<textarea class="form-control" id="inputExperience" placeholder="Experience">
+												 <?= $record->name ?>
+												</textarea>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address (Optional)</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+												<textarea class="form-control" id="inputExperience" placeholder="Experience">
+												<?= $record->name ?>
+												</textarea>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Google Map Link</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputSkills" placeholder="Skills" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Youtube Link</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputSkills" placeholder="Skills" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Facebook Link</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputSkills" placeholder="Skills" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Instagram Link</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputSkills" placeholder="Skills" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Twitter Link</label>
 											<div class="col-sm-10">
-												<input type="text" class="form-control" id="inputSkills" placeholder="Skills" />
+											<input class="form-control" value="<?= $record->name ?>">
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<div class="offset-sm-2 col-sm-10">
-												<button type="submit" class="btn btn-danger">
-													Edit
+												<button  class="btn btn-info">
+												Save Changes
 												</button>
 											</div>
 										</div>

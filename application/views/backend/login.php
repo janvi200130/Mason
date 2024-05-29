@@ -55,6 +55,15 @@
 						</div>
 					</div>
 					<?= form_error('password') ?>
+
+					<div class="input-group mb-3">
+						<input type="text" name="captcha" class="form-control" placeholder="Captcha">
+						
+					</div>
+
+
+					<?= $image ?>
+
 					<div class="row">
 
 

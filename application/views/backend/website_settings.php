@@ -10,9 +10,7 @@
 
 <body class="hold-transition sidebar-mini">
 	<div class="wrapper">
-		<nav class="main-header navbar py-4 navbar-expand navbar-white navbar-light">
-
-		</nav>
+		
 
 		<?php include('layouts/sidebar.php') ?>
 
@@ -94,13 +92,13 @@
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+												<textarea class="form-control" id="inputExperience" placeholder="Experience" disabled></textarea>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address (Optional)</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+												<textarea class="form-control" disabled id="inputExperience" placeholder="Experience"></textarea>
 											</div>
 										</div>
 										<div class="form-group row">
@@ -146,9 +144,9 @@
 
 										<div class="form-group row">
 											<div class="offset-sm-2 col-sm-10">
-												<button type="submit" class="btn btn-danger">
-													Edit
-												</button>
+												<a href="<?= base_url('admin/edit-setting') ?>" class="btn btn-link">
+													Edit Settings
+									</a>
 											</div>
 										</div>
 									<?php } ?>
