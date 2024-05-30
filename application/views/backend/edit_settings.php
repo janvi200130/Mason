@@ -38,7 +38,9 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-body">
-
+<form action="">
+	
+</form>
 									<?php
 									foreach ($records as $record) {
 									?>
@@ -129,7 +131,7 @@
 
 										<div class="form-group row">
 											<div class="offset-sm-2 col-sm-10">
-												<button  class="btn btn-info">
+												<button type="submit" class="btn btn-info">
 												Save Changes
 												</button>
 											</div>

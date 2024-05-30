@@ -189,7 +189,8 @@
 					<li class="nav-header">Extra</li>
 					<li class="nav-item">
 						<a href="<?= base_url('admin/profile') ?>" class="nav-link">
-							<i class="nav-icon far fa-calendar-alt"></i>
+							<!-- <i class="nav-icon far "></i> -->
+							<i class="nav-icon fa-solid fa-circle-user"></i>
 							<p>
 								Profile
 							</p>
