@@ -164,6 +164,14 @@ class AdminController extends CI_Controller
 	}
 
 
+	public function update_setting()
+	{
+
+		echo 'update settings';
+
+	}
+
+
 	public function add_faq()
 	{
 		$this->load->view('backend/add_faq');
@@ -178,7 +186,7 @@ class AdminController extends CI_Controller
 		if ($response) {
 			$this->session->set_flashdata('success', 'Faq Added successfully');
 			redirect(base_url('admin/faq'));
-		}else{
+		} else {
 			$this->session->set_flashdata('success', 'Faq Added successfully');
 			redirect(base_url('admin/faq'));
 		}

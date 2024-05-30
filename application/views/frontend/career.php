@@ -31,12 +31,30 @@
 							<div class="quform-elements">
 								<div class="row">
 
+									<?php
+									if ($this->session->flashdata('success')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('success'); ?>
+										</div>
+									<?php } ?>
+
+									<?php
+									if ($this->session->flashdata('error')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('error'); ?>
+										</div>
+									<?php } ?>
+
+
+
 									<!-- Begin Text input element -->
 									<div class="col-md-6">
 										<div class="quform-element form-group">
 											<label for="name">Your Name <span class="quform-required">*</span></label>
 											<div class="quform-input">
-												<input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+												<input class="form-control" id="name" type="text" name="name" required placeholder="Your name here" />
 											</div>
 										</div>
 									</div>
@@ -47,7 +65,7 @@
 										<div class="quform-element form-group">
 											<label for="email">Your Email <span class="quform-required">*</span></label>
 											<div class="quform-input">
-												<input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+												<input class="form-control" id="email" type="email" name="email" required placeholder="Your email here" />
 											</div>
 										</div>
 									</div>
@@ -59,7 +77,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Contact Number</label>
 											<div class="quform-input">
-												<input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+												<input class="form-control" id="phone" type="text" name="phone" required placeholder="Your phone here" />
 											</div>
 										</div>
 									</div>
@@ -70,7 +88,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Date Of Birth</label>
 											<div class="quform-input">
-												<input class="form-control" id="phone" type="date" name="dob" placeholder="Date Of Birth" />
+												<input class="form-control" id="phone" type="date" name="dob" required placeholder="Date Of Birth" />
 											</div>
 										</div>
 									</div>
@@ -81,7 +99,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Qualification</label>
 											<div class="quform-input">
-												<input class="form-control" id="phone" type="text" name="qualification" placeholder="Your Qualification Here" />
+												<input class="form-control" id="phone" type="text" name="qualification" required placeholder="Your Qualification Here" />
 											</div>
 										</div>
 									</div>
@@ -92,7 +110,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Upload Document [Resume,CV]</label>
 											<div class="quform-input">
-												<input class="form-control" id="phone" type="file" name="document" placeholder="Your phone here" />
+												<input class="form-control" id="phone" type="file" name="document" required placeholder="Your phone here" />
 											</div>
 										</div>
 									</div>
@@ -103,7 +121,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Address</label>
 											<div class="quform-input">
-												<textarea class="form-control"  name="address" id="" >
+												<textarea class="form-control" name="address" id="">
 
 												</textarea>
 											</div>

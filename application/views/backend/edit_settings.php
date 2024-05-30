@@ -38,105 +38,101 @@
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-body">
-<form action="">
-	
-</form>
+									<form action="<?= base_url('admin/update-setting') ?>" method="post" enctype="multipart/form-data">
 									<?php
 									foreach ($records as $record) {
 									?>
 										<div class="form-group row">
 											<label for="inputName" class="col-sm-2 col-form-label">Website Name</label>
 											<div class="col-sm-10">
-												<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="name" value="<?= $record->name ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputEmail" class="col-sm-2 col-form-label">Logo</label>
 											<div class="col-sm-10">
-												<img src="<?= $record->logo ?>" alt="">
-												<input class="form-control" value="<?= $record->name ?>">
+											<img src="<?= base_url().'assets/img/logos/'.$record->logo ?>" alt="" height="80">
+												<input class="form-control" type="hidden" name="oldLogo" value="<?= $record->logo ?>">
+												<input class="form-control" name="newLogo" type="file">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
-												
+												<input class="form-control" name="phone_number1" value="<?= $record->phone_number1 ?>">
+
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number (Optional)</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="phone_number2" value="<?= $record->phone_number2 ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Email</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="email1" value="<?= $record->email1 ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Email (Optional)</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="email2" value="<?= $record->email2 ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience">
+												<textarea class="form-control" name="address" id="inputExperience" placeholder="Experience">
 												 <?= $record->name ?>
 												</textarea>
 											</div>
 										</div>
-										<div class="form-group row">
-											<label for="inputExperience" class="col-sm-2 col-form-label">Address (Optional)</label>
-											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience">
-												<?= $record->name ?>
-												</textarea>
-											</div>
-										</div>
+									
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Google Map Link</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+											
+												<textarea class="form-control" name="google_map" id="">
+													<?= $record->google_map ?>
+												</textarea>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Youtube Link</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="youtube_link" value="<?= $record->youtube_link ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Facebook Link</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="facebook_link" value="<?= $record->facebook_link ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Instagram Link</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="instagram_link" value="<?= $record->instagram_link ?>">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Twitter Link</label>
 											<div class="col-sm-10">
-											<input class="form-control" value="<?= $record->name ?>">
+												<input class="form-control" name="twitter_link" value="<?= $record->twitter_link ?>">
 											</div>
 										</div>
 
 										<div class="form-group row">
 											<div class="offset-sm-2 col-sm-10">
 												<button type="submit" class="btn btn-info">
-												Save Changes
+													Save Changes
 												</button>
 											</div>
 										</div>
 									<?php } ?>
+									</form>
 								</div>
 							</div>
 						</div>

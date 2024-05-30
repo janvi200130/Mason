@@ -12,39 +12,72 @@ class HomeController extends CI_Controller
 		$table = 'faqs';
 		$data['faqs'] = $this->Home_model->getAllRecords($table);
 
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+
 		$this->load->view('frontend/index', $data);
 	}
 	public function about_us()
 	{
-		$this->load->view('frontend/about');
+
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+
+		$this->load->view('frontend/about', $data);
 	}
 	public function services()
 	{
-		$this->load->view('frontend/services');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+
+
+		$this->load->view('frontend/services', $data);
 	}
 
 	public function technology()
 	{
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
 		$this->load->view('frontend/technology');
 	}
 
 	public function manufacturing()
 	{
+
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
 		$this->load->view('frontend/manufacturing');
 	}
 
 	public function sales()
 	{
-		$this->load->view('frontend/sales');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+		$this->load->view('frontend/sales', $data);
 	}
 
 	public function enquiries()
 	{
-		$this->load->view('frontend/enquiry');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+
+		$this->load->view('frontend/enquiry', $data);
 	}
 	public function careers()
 	{
-		$this->load->view('frontend/career');
+
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+
+		$this->load->view('frontend/career', $data);
 	}
 	public function faqs()
 	{
@@ -52,15 +85,24 @@ class HomeController extends CI_Controller
 	}
 	public function contact_us()
 	{
-		$this->load->view('frontend/contact');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+		$this->load->view('frontend/contact', $data);
 	}
 	public function term_condition()
 	{
-		$this->load->view('frontend/terms');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+		$this->load->view('fronten,$datad/terms', $data);
 	}
 	public function privacy()
 	{
-		$this->load->view('frontend/privacy_policy');
+		$this->db->where('id', 1);
+		$data['settings'] = $this->db->get('website_settings')->row_array();
+
+		$this->load->view('frontend/privacy_policy', $data);
 	}
 
 
@@ -108,6 +150,45 @@ class HomeController extends CI_Controller
 		} else {
 			$this->session->set_flashdata('error', 'Error in Form Submission');
 			redirect(base_url('contact'));
+		}
+	}
+
+	public function save_career()
+	{
+
+		$config['upload_path'] = './assets/uploads/career/';
+		$config['allowed_types'] = 'pdf';
+		$config['max_size'] = 10048; // Maximum size in kilobytes
+		$config['max_width'] = 1024; // Maximum width in pixels
+		$config['max_height'] = 768; // Maximum height in pixels
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('document')) {
+
+			$this->session->set_flashdata('error', $this->upload->display_errors());
+			redirect(base_url('career'));
+		} else {
+
+			$fileData = $this->upload->data();
+
+			$data['resume'] = $fileData['file_name'];
+			$data['name'] = $this->input->post('name');
+			$data['email'] = $this->input->post('email');
+			$data['phone'] = $this->input->post('phone');
+			$data['address'] = $this->input->post('address');
+			$data['qualification'] = $this->input->post('qualification');
+			$data['dob'] = $this->input->post('dob');
+
+			$response = $this->db->insert('careers', $data);
+		}
+
+		if ($response) {
+			$this->session->set_flashdata('success', 'Successfully Submitted Form');
+			redirect(base_url('career'));
+		} else {
+			$this->session->set_flashdata('error', 'Error in Form Submission');
+			redirect(base_url('career'));
 		}
 	}
 }

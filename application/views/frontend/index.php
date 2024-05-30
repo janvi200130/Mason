@@ -1,10 +1,14 @@
 
+
     <?php include('layouts/header.php')?>
 
     <style>
         .why-choose-style02 .cd-headline {
                 font-size: 30px;
             }
+			iframe{
+				width: 100% !important;
+			}
         @media screen and (max-width: 991px) {
             .why-choose-style02 .cd-headline {
                 font-size: 25px;
@@ -293,7 +297,7 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <h4 class="h5">Location</h4>
-                                    <span>66 Guild Street 512B, Great North Town.</span>
+                                    <span><?= $settings['address'] ?></span>
                                 </div>
                             </div>
                             <div class="d-flex primary-shadow p-1-6 p-sm-1-9 mb-1-6 contact-box">
@@ -302,8 +306,8 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <h4 class="h5">Phone Number</h4>
-                                    <span class="d-block">(+44) 123 456 789</span>
-                                    <span>(+1) 234-567-9874</span>
+                                    <span class="d-block"><?= $settings['phone_number1'] ?></span>
+                                    <span><?= $settings['phone_number2'] ?></span>
                                 </div>
                             </div>
                             <div class="d-flex primary-shadow p-1-6 p-sm-1-9 mb-1-6 contact-box">
@@ -312,8 +316,8 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <h4 class="h5">Email Address</h4>
-                                    <span class="d-block">example@yourdomain.com</span>
-                                    <span>info@yourdomain.com</span>
+                                    <span class="d-block"><?= $settings['email1'] ?></span>
+                                    <span><?= $settings['email2'] ?></span>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +354,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="name">Your Name <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+                                                        <input class="form-control" id="name" type="text" name="name"  required placeholder="Your name here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -361,7 +365,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="email">Your Email <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+                                                        <input class="form-control" id="email" type="email" name="email" required placeholder="Your email here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -372,7 +376,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="subject">Your Subject <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+                                                        <input class="form-control" id="subject" type="text" name="subject" required placeholder="Your subject here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -383,7 +387,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="phone">Contact Number</label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                                        <input class="form-control" id="phone" type="text" name="phone" required placeholder="Your phone here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -425,7 +429,8 @@
         <!-- MAP
         ================================================== -->
         <div class="container">
-            <iframe class="contact-map border-radius-5" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    
+		<?=  $settings['google_map']; ?>
         </div>
 
         <!-- START FAQ

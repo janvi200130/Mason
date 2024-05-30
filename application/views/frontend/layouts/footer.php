@@ -12,17 +12,20 @@
             <div class="col-md-3 col-lg-3 mt-2-9">
 
                 <div class="footer-logo mb-1-9">
-                    <h1 class="text-danger"><b>MASON</b></h1>
+                    <a class="text-danger" href="<?= base_url('/') ?>">
+					
+					<img src="<?= base_url() ?>assets\img\logos\<?=  $settings['logo']; ?>" alt="" style="height: 80px;">
+	</a>
                     <!-- <a href="index.html"><img src="img/logos/footer-light-logo.png" alt="Footer Logo"></a> -->
                 </div>
 
                 <h4 class="text-white mb-1-9 fw-light w-lg-75 display-29 lh-base opacity8 letter-spacing-1">We assist you to develop up your flourishing commercial enterprise.</h4>
 
                 <ul class="social-icon-style1">
-                    <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#!"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="<?=  $settings['youtube_link']; ?>"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="<?=  $settings['instagram_link']; ?>"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="<?=  $settings['facebook_link']; ?>"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="<?=  $settings['twitter_link']; ?>"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
 
             </div>
@@ -52,14 +55,16 @@
                     <div class="flex-shrink-0"><img src="<?= base_url(); ?>assets/img/icons/icon-phone.png" alt="..." class="w-40px"></div>
                     <div class="flex-grow-1 ms-3">
                         <h4 class="mb-1 h5 text-white">Contact Us</h4>
-                        <p class="mb-0 text-white">(44) 123-456-789</p>
+                        <p class="mb-0 text-white"><?=  $settings['phone_number1']; ?></p>
+                        <p class="mb-0 text-white"><?=  $settings['phone_number2']; ?></p>
                     </div>
                 </div>
                 <div class="d-flex">
                     <div class="flex-shrink-0"><img src="<?= base_url(); ?>assets/img/icons/icon-mail.png" alt="..." class="w-40px"></div>
                     <div class="flex-grow-1 ms-3">
                         <h4 class="mb-1 h5 text-white">Mail Us</h4>
-                        <p class="mb-0 text-white">info@yourdomain.com</p>
+						<p class="mb-0 text-white"><?=  $settings['email1']; ?></p>
+                        <p class="mb-0 text-white"><?=  $settings['email2']; ?></p>
                     </div>
                 </div>
             </div>
@@ -91,7 +96,7 @@
             </style>
 
             <div class="float" target="_blank" style="bottom: 131px; right:30px;">
-                    <a href="https://api.whatsapp.com/send?phone=+91 9238996931&text=Hello."><img src="http://localhost/budgetdry/assets/users/images/Logos/whatsap.png" alt="" style="width:60px; height:60px; margin-top:47px; margin-left:11px;"></a>
+                    <a href="https://api.whatsapp.com/send?phone=+91 9238996931&text=Hello."><img src="<?= base_url() ?>assets/img/logos/whatsap.png" alt="" style="width:60px; height:60px; margin-top:47px; margin-left:11px;"></a>
             </div>
         <!-- Whatshapp Integration End  -->
 

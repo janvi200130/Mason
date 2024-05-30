@@ -26,11 +26,13 @@ $route['policy']='HomeController/privacy';
 
 $route['save-enquiry']='HomeController/save_enquiry';
 $route['save-contact']='HomeController/save_contact';
+$route['save-career']='HomeController/save_career';
 
 
 // Backend Routes 
 $route['login']='LoginController/index';
 $route['admin']='LoginController/index';
+$route['logout']='LoginController/logout';
 $route['auth'] = 'LoginController/auth';
 
 $route['admin/dashboard']='AdminController/index';
@@ -68,3 +70,4 @@ $route['admin/deleteCareer']='AdminController/deleteCareer';
 
 $route['admin/settings']='AdminController/settings';
 $route['admin/edit-setting']='AdminController/edit_setting';
+$route['admin/update-setting']='AdminController/update_setting';

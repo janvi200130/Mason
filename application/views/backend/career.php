@@ -72,7 +72,11 @@
 													<td> <?= $row->phone ?></td>
 													<td><?= $row->dob ?></td>
 													<td><?= $row->qualification ?></td>
-													<td><?= $row->resume ?></td>
+													<td>
+
+													<a target="_blank" href="<?= base_url().'assets/uploads/career/'.$row->resume ?>">View</a>
+														
+													</td>
 													<td><?= $row->address ?></td>
 													<td>
 														<!-- <a href="<?= base_url('admin/deleteContact/' . $row->id) ?>"><i class="fa fa-trash"></i></a> -->

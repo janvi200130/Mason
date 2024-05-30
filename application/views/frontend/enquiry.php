@@ -32,13 +32,28 @@
                                 <form class="contact " action="<?= base_url('save-enquiry') ?>" method="post" enctype="multipart/form-data" onclick="">
                                     <div class="quform-elements">
                                         <div class="row">
+										<?php
+									if ($this->session->flashdata('success')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('success'); ?>
+										</div>
+									<?php } ?>
+
+									<?php
+									if ($this->session->flashdata('error')) {
+									?>
+										<div class="alert alert-success">
+											<?php echo $this->session->flashdata('error'); ?>
+										</div>
+									<?php } ?>
 
                                             <!-- Begin Text input element -->
                                             <div class="col-md-6">
                                                 <div class="quform-element form-group">
                                                     <label for="name">Your Name <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+                                                        <input class="form-control" id="name" type="text" required name="name" placeholder="Your name here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -49,7 +64,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="email">Your Email <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+                                                        <input class="form-control" id="email" type="email" required name="email" placeholder="Your email here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,7 +75,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="subject">Your Subject <span class="quform-required">*</span></label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+                                                        <input class="form-control" id="subject" type="text" required name="subject" placeholder="Your subject here" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,7 +86,7 @@
                                                 <div class="quform-element form-group">
                                                     <label for="phone">Contact Number</label>
                                                     <div class="quform-input">
-                                                        <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                                        <input class="form-control" id="phone" type="text" required name="phone" placeholder="Your phone here" />
                                                     </div>
                                                 </div>
                                             </div>

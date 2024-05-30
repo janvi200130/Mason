@@ -95,10 +95,10 @@ class LoginController extends CI_Controller
 		}
 	}
 
-	// public function logout(){
-	// 	$this->session->unset_userdata('admin');
-	// 	redirect(base_url() . 'admin/Login/index','refresh');
-	// }
+	public function logout(){
+		$this->session->unset_userdata('admin');
+		redirect(base_url('login'),'refresh');
+	}
 
 
 }

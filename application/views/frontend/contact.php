@@ -84,7 +84,7 @@
 										<div class="quform-element form-group">
 											<label for="name">Your Name <span class="quform-required">*</span></label>
 											<div class="quform-input">
-												<input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+												<input class="form-control" id="name" type="text" name="name" required placeholder="Your name here" />
 											</div>
 										</div>
 									</div>
@@ -95,7 +95,7 @@
 										<div class="quform-element form-group">
 											<label for="email">Your Email <span class="quform-required">*</span></label>
 											<div class="quform-input">
-												<input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+												<input class="form-control" id="email" type="email" name="email" required placeholder="Your email here" />
 											</div>
 										</div>
 									</div>
@@ -106,7 +106,7 @@
 										<div class="quform-element form-group">
 											<label for="subject">Your Subject <span class="quform-required">*</span></label>
 											<div class="quform-input">
-												<input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+												<input class="form-control" id="subject" type="text" name="subject" required placeholder="Your subject here" />
 											</div>
 										</div>
 									</div>
@@ -117,7 +117,7 @@
 										<div class="quform-element form-group">
 											<label for="phone">Contact Number</label>
 											<div class="quform-input">
-												<input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+												<input class="form-control" id="phone" type="text" name="phone" required placeholder="Your phone here" />
 											</div>
 										</div>
 									</div>

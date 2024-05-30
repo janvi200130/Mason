@@ -53,15 +53,15 @@
 										<div class="form-group row">
 											<label for="inputEmail" class="col-sm-2 col-form-label">Logo</label>
 											<div class="col-sm-10">
-												<!-- <img src="" alt=""> -->
-												<p>Place Image Here</p>
+												<img src="<?= base_url().'assets/img/logos/'.$record->logo ?>" alt="" height="80">
+												
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number</label>
 											<div class="col-sm-10">
 												<p class="form-control">
-													<?= $record->name ?>
+													<?= $record->phone_number1 ?>
 												</p>
 											</div>
 										</div>
@@ -69,7 +69,7 @@
 											<label for="inputName2" class="col-sm-2 col-form-label">Phone Number (Optional)</label>
 											<div class="col-sm-10">
 												<p class="form-control">
-													<?= $record->name ?>
+													<?= $record->phone_number2 ?>
 												</p>
 											</div>
 										</div>
@@ -77,7 +77,7 @@
 											<label for="inputName2" class="col-sm-2 col-form-label">Email</label>
 											<div class="col-sm-10">
 												<p class="form-control">
-													<?= $record->name ?>
+													<?= $record->email1 ?>
 												</p>
 											</div>
 										</div>
@@ -85,30 +85,28 @@
 											<label for="inputName2" class="col-sm-2 col-form-label">Email (Optional)</label>
 											<div class="col-sm-10">
 												<p class="form-control">
-													<?= $record->name ?>
+													<?= $record->email2 ?>
 												</p>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience" disabled></textarea>
+												<textarea class="form-control" id="inputExperience" placeholder="Experience" disabled>
+												<?= $record->address ?>
+												</textarea>
 											</div>
 										</div>
-										<div class="form-group row">
-											<label for="inputExperience" class="col-sm-2 col-form-label">Address (Optional)</label>
-											<div class="col-sm-10">
-												<textarea class="form-control" disabled id="inputExperience" placeholder="Experience"></textarea>
-											</div>
-										</div>
+									
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Google Map Link</label>
 											<div class="col-sm-10">
-												<p class="form-control">
+										
 													<?= $record->google_map ?>
-												</p>
+											
 											</div>
 										</div>
+
 										<div class="form-group row">
 											<label for="inputSkills" class="col-sm-2 col-form-label">Youtube Link</label>
 											<div class="col-sm-10">
