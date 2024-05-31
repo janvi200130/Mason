@@ -61,13 +61,13 @@
 					<?= form_error('password') ?>
 
 					<div class="input-group mb-3">
-						<input type="text" name="captcha" class="form-control" placeholder="Captcha">
-						
+						<input type="text" name="captcha" maxlength="4" minlength="4" required class="form-control" placeholder="Captcha">
+				
 					</div>
 
 
 					<?= $image ?>
-
+					<a href="<?= base_url('login') ?>">Refresh Captcha</a>
 					<div class="row">
 
 

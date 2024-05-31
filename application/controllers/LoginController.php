@@ -29,7 +29,6 @@ class LoginController extends CI_Controller
 		$cap = create_captcha($vals);
 		$this->session->set_userdata('captcha', $cap['word']);
 	
-
 		$this->load->view('backend/login',$cap);
 	}
 
@@ -37,31 +36,16 @@ class LoginController extends CI_Controller
 	public function auth()
 	{
 
-			// Load the CAPTCHA helper
-			$this->load->helper('captcha');
-
-			$word = rand(1000, 9999);
-	
-			// CAPTCHA configuration
-			$vals = array(
-				'word'          => $word,
-				'img_path'      => 'captcha_img/',
-				'img_url'       => base_url() . 'captcha_img',
-				'img_width'     => '100',
-				'img_height'    => '50',
-				'expiration'    => '7200',
-	
-			);
-	
-			$cap = create_captcha($vals);
-			$this->session->set_userdata('captcha', $cap['word']);
-
-
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 		if ($this->form_validation->run() == true) {
+
+			// check captcha is same or not
+			if($this->session->userdata('captcha') == $this->input->post('captcha')){
+
+	
 			// success
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
@@ -82,16 +66,39 @@ class LoginController extends CI_Controller
 				} else {
 					// incorrect password
 					$this->session->set_flashdata('msg', 'Enter correct password ');
-					$this->load->view('backend/login',$cap);
+						redirect(base_url('login'));
 				}
 			} else {
 				$this->session->set_flashdata('msg', 'Enter correct username');
-				$this->load->view('backend/login',$cap);
+				redirect(base_url('login'));
 			}
+		}else{
+		
+			$this->session->set_flashdata('msg', 'Enter correct captcha');
+			redirect(base_url('login'));
+		}
 		} else {
-			// form errors
-			$this->load->view('backend/login',$cap);
-			// redirect(base_url('/login'));
+
+			// Load the CAPTCHA helper
+		$this->load->helper('captcha');
+
+		$word = rand(1000, 9999);
+
+		// CAPTCHA configuration
+		$vals = array(
+			'word'          => $word,
+			'img_path'      => 'captcha_img/',
+			'img_url'       => base_url() . 'captcha_img',
+			'img_width'     => '100',
+			'img_height'    => '50',
+			'expiration'    => '7200',
+
+		);
+
+		$cap = create_captcha($vals);
+		$this->session->set_userdata('captcha', $cap['word']);
+	
+		$this->load->view('backend/login',$cap);
 		}
 	}
 
