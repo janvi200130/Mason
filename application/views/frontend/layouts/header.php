@@ -14,7 +14,7 @@
 	<meta name="description" content="Mason Company provides Technology and Services">
 
 	<!-- title  -->
-	<title>MASON</title>
+	<title>MASAN - Technology & Services</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logos/<?= $settings['logo'] ?>">

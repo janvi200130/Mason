@@ -1,7 +1,11 @@
-  <!-- Tell the browser to be responsive to screen width -->
+
+<title>Admin | Masan - Technology & Services</title>
+<!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
+
   <link rel="stylesheet" href="<?= base_url() ?>assets/admin_assets/plugins/fontawesome-free/css/all.min.css">
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logos/mts logo.jpg">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bbootstrap 4 -->
