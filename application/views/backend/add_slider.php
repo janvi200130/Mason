@@ -42,34 +42,39 @@
 
 
 							<div class="card">
+
+							<?php if ($this->session->flashdata('error') != "") {
+								?>
+									<div class="alert alert-success"><?php echo $this->session->flashdata('error') ?></div>
+								<?php				} ?>
 								<div class="card-body">
 									<h5>
 										Upload Slider
 									</h5>
 
-									<form action="" >
+									<form action="<?= base_url('admin/save-slider') ?>" method="post" enctype="multipart/form-data">
 										<div>
 											<label for="slider">Slider Image</label>
-											<input type="file" class="form-control" name="slider" id="">
+											<input type="file" required class="form-control" name="sliderimage" id="">
 										</div>
 										<div class="mt-2">
 											<label for="slider">Title Text</label>
-											<input type="text" class="form-control" name="slider" id="">
+											<input type="text" class="form-control" name="title_text" id="">
 										</div>
 								
 										<div class="mt-2">
 											<label for="slider">Sub Title Text</label>
-											<input type="text" class="form-control" name="slider" id="">
+											<input type="text" class="form-control" name="subtitle_text" id="">
 										</div>
 
 										<div class="mt-2">
 											<label for="slider">Button Text</label>
-											<input type="text" class="form-control" name="slider" id="">
+											<input type="text" class="form-control" name="btn_text" id="">
 										</div>
 
 										<div class="mt-2">
 											<label for="slider">Button Link</label>
-											<input type="text" class="form-control" name="slider" id="">
+											<input type="text" class="form-control" name="btn_link" id="">
 										</div>
 
 										<button type="submit"  class=" mt-3 btn btn-success" >Upload Slider</button>

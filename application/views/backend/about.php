@@ -45,7 +45,7 @@
 								<?php if ($this->session->flashdata('success') != "") {
 								?>
 									<div class="alert alert-success"><?php echo $this->session->flashdata('success') ?></div>
-								<?php				} ?>
+								<?php	} ?>
 
 								<div class="card-body">
 									<table id="example1" class="table table-bordered table-striped">

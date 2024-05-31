@@ -67,7 +67,11 @@
 											foreach ($records as $row) {  ?>
 												<tr>
 													<td><?= $i ?></td>
-													<td><?= $row->slider_img ?></td>
+													<td>
+
+														<img src="<?= base_url() ?>assets\uploads\slider\<?= $row->slider_img ?> ?>" alt="" height="100" width="100">
+													
+													</td>
 													<td><?= $row->title ?></td>
 													<td> <?= $row->sub_title ?></td>
 													<td><?= $row->btn_text ?></td>

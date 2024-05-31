@@ -22,7 +22,7 @@
 		
 			<div class="login-logo">
 			<img src="<?= base_url(); ?>assets/img/logos/mts logo.jpg" width="80" alt="">
-			<b>Mason </b>Admin
+	<b>	Admin Login</b>
 		</div>
 
 		<div class="card">

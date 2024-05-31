@@ -7,16 +7,17 @@ class AdminController extends CI_Controller
 
 
 
-	public function __construct() {
+	public function __construct()
+	{
 		parent::__construct();
 		$admin = $this->session->userdata('admin');
-		if(empty($admin)){
-	
-			$this->session->set_flashdata('msg','Your session has been expired');
+		if (empty($admin)) {
+
+			$this->session->set_flashdata('msg', 'Your session has been expired');
 			redirect(base_url('login'));
 		}
 	}
-	
+
 
 	public function index()
 	{
@@ -38,12 +39,36 @@ class AdminController extends CI_Controller
 	}
 
 
-	public function editAbout()
+	public function editAbout($id)
+	{
+
+		$table = 'abouts';
+		$data['records'] = $this->Admin_model->getRecordById($id, $table);
+
+		$this->load->view('backend/edit_about', $data);
+	}
+
+	public function updateAbout()
 	{
 		$table = 'abouts';
 		$id = $this->input->post('id');
-		$data = null;
-		$reponse =  $this->Admin_model->updateRecord($id, $data, $table);
+
+		$data = array(
+			'intruduction' => $this->input->post('intruduction'),
+			'mission' => $this->input->post('mission'),
+			'vision' => $this->input->post('vision')
+		);
+
+		$response = $this->Admin_model->updateRecord($id, $data, $table);
+		if ($response) {
+
+			$this->session->set_flashdata('success', 'About Updated successfully');
+			redirect(base_url('admin/about'));
+		} else {
+
+			$this->session->set_flashdata('error', 'Error in About Update');
+			redirect(base_url('admin/about'));
+		}
 	}
 
 	public function contact()
@@ -75,6 +100,43 @@ class AdminController extends CI_Controller
 	}
 
 
+	public function saveSlider()
+	{
+
+		$config['upload_path'] = './assets/uploads/slider/';
+		$config['allowed_types'] = 'jpg|jpeg|png';
+		$config['max_size'] = 10048; // Maximum size in kilobytes
+
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('sliderimage')) {
+
+			$this->session->set_flashdata('error', $this->upload->display_errors());
+			redirect(base_url('admin/add-slider'));
+		} else {
+
+			$fileData = $this->upload->data();
+
+			$data['slider_img'] = $fileData['file_name'];
+			$data['title'] = $this->input->post('title_text');
+			$data['sub_title'] = $this->input->post('subtitle_text');
+			$data['btn_text'] = $this->input->post('btn_text');
+			$data['btn_link'] = $this->input->post('btn_link');
+
+
+			$response = $this->db->insert('sliders', $data);
+		}
+
+		if ($response) {
+			$this->session->set_flashdata('success', 'Slider Added Successfully');
+			redirect(base_url('admin/slider'));
+		} else {
+			$this->session->set_flashdata('error', 'Error in slider add');
+			redirect(base_url('admin/slider'));
+		}
+	}
+
 	public function slider()
 	{
 
@@ -87,7 +149,6 @@ class AdminController extends CI_Controller
 
 	public function deleteSlider()
 	{
-
 
 		$id = $this->input->get('id');
 
@@ -179,7 +240,51 @@ class AdminController extends CI_Controller
 	public function update_setting()
 	{
 
-		echo 'update settings';
+
+		$table = 'website_settings';
+		$id = $this->input->post('id');
+
+
+		$config['upload_path'] = './assets/img/logos/';
+		$config['allowed_types'] = 'png|jpg|jpeg';
+		$config['max_size'] = 10048; // Maximum size in kilobytes
+
+
+		$this->load->library('upload', $config);
+
+		if ($this->upload->do_upload('newLogo')) {
+
+			$fileData = $this->upload->data();
+			$image = $fileData['file_name'];
+		} else {
+			$image = $this->input->post('oldLogo');
+		}
+		$data = array(
+			'logo' => $image,
+			'name' => $this->input->post('name'),
+			'phone_number1' => $this->input->post('phone_number1'),
+			'phone_number2' => $this->input->post('phone_number2'),
+			'email1' => $this->input->post('email1'),
+			'email2' => $this->input->post('email2'),
+			'address' => $this->input->post('address'),
+			'google_map' => $this->input->post('google_map'),
+			'youtube_link' => $this->input->post('youtube_link'),
+			'instagram_link' => $this->input->post('instagram_link'),
+			'facebook_link' => $this->input->post('facebook_link'),
+			'twitter_link' => $this->input->post('twitter_link'),
+		);
+
+		$response = $this->Admin_model->updateRecord($id, $data, $table);
+
+		if ($response) {
+
+			$this->session->set_flashdata('success', 'Website Settigns Updated successfully');
+			redirect(base_url('admin/settings'));
+		} else {
+
+			$this->session->set_flashdata('error', 'Error in Website Settings Update');
+			redirect(base_url('admin/settings'));
+		}
 	}
 
 

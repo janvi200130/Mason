@@ -37,8 +37,8 @@ $route['auth'] = 'LoginController/auth';
 
 $route['admin/dashboard']='AdminController/index';
 $route['admin/about']='AdminController/about';
-
-// profile
+$route['admin/edit-about/(:any)']='AdminController/editAbout/$1';
+$route['admin/updateAbout']='AdminController/updateAbout';
 $route['admin/profile']='AdminController/profile';
 
 
@@ -54,6 +54,7 @@ $route['admin/deleteFaq']='AdminController/deleteFaq';
 $route['admin/slider']='AdminController/slider';
 $route['admin/add-slider']='AdminController/addSlider';
 $route['admin/deleteSlider']='AdminController/deleteSlider';
+$route['admin/save-slider']='AdminController/saveSlider';
 
 // contact
 $route['admin/contact']='AdminController/contact';
@@ -67,7 +68,7 @@ $route['admin/deleteEnquiry']='AdminController/deleteEnquiry';
 $route['admin/career']='AdminController/career';
 $route['admin/deleteCareer']='AdminController/deleteCareer';
 
-
+// website settings
 $route['admin/settings']='AdminController/settings';
 $route['admin/edit-setting']='AdminController/edit_setting';
 $route['admin/update-setting']='AdminController/update_setting';

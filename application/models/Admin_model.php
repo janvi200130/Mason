@@ -28,6 +28,14 @@ class Admin_model extends CI_Model
 	}
 
 
+	   // Update record
+	   public function updateRecord($id, $data,$table) {
+        $this->db->where('id', $id);
+        return $this->db->update($table, $data);
+    }
+
+
+
 	// delete a record
 
 	public function deleteRecord($id,$table)

@@ -83,6 +83,7 @@ class HomeController extends CI_Controller
 	{
 		$this->load->view('frontend/faq');
 	}
+
 	public function contact_us()
 	{
 		$this->db->where('id', 1);
@@ -90,6 +91,7 @@ class HomeController extends CI_Controller
 
 		$this->load->view('frontend/contact', $data);
 	}
+	
 	public function term_condition()
 	{
 		$this->db->where('id', 1);

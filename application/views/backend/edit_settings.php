@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>AdminLTE 3 | User Profile</title>
+	<title>Admin | Masan</title>
 	<?php include('layouts/header.php') ?>
 </head>
 
@@ -46,6 +46,7 @@
 											<label for="inputName" class="col-sm-2 col-form-label">Website Name</label>
 											<div class="col-sm-10">
 												<input class="form-control" name="name" value="<?= $record->name ?>">
+												<input type="hidden" name="id" value="<?= $record->id ?>">
 											</div>
 										</div>
 										<div class="form-group row">
