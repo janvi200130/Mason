@@ -33,6 +33,11 @@
 
 	<!-- theme core css -->
 	<link href="<?= base_url(); ?>assets/css/styles.css" rel="stylesheet">
+	<style>
+			iframe{
+				width: 100% !important;
+			}
+	</style>
 
 </head>
 

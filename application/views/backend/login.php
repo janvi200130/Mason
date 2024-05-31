@@ -13,12 +13,16 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/admin_assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
 	<link rel="stylesheet" href="<?= base_url() ?>assets/admin_assets/dist/css/adminlte.min.css?v=3.2.0">
+
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logos/mts logo.jpg">
 </head>
 
 <body class="hold-transition login-page">
 	<div class="login-box">
-		<div class="login-logo">
-			<a href="../../index2.html"><b>Mason </b>Admin</a>
+		
+			<div class="login-logo">
+			<img src="<?= base_url(); ?>assets/img/logos/mts logo.jpg" width="80" alt="">
+			<b>Mason </b>Admin
 		</div>
 
 		<div class="card">

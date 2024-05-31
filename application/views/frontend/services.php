@@ -29,7 +29,7 @@
                     <div class="col-md-6 col-lg-4 mt-1-9">
                         <div class="card card-style01">
                             <div class="card-body p-0">
-                                <div class="card-icon">
+							<div class="card-icon" style="height: unset;width:unset">
 								<img src="<?=base_url();?>assets/img/icons/technology.gif" alt="..." class="position-relative z-index-9 w-150px">
                                 </div>
                                 <div class="position-relative service-content z-index-9">
@@ -43,7 +43,7 @@
                     <div class="col-md-6 col-lg-4 mt-1-9">
                         <div class="card card-style01">
                             <div class="card-body p-0">
-                                <div class="card-icon">
+                                <div class="card-icon" style="height: unset;width:unset">
                                     <img src="<?=base_url();?>assets/img/icons/manifturing.gif" alt="..." class="position-relative z-index-9 w-150px">
 
                                 </div>
@@ -58,7 +58,7 @@
                     <div class="col-md-6 col-lg-4 mt-1-9">
                         <div class="card card-style01">
                             <div class="card-body p-0">
-                                <div class="card-icon">
+							<div class="card-icon" style="height: unset;width:unset">
 								<img src="<?=base_url();?>assets/img/icons/sales.gif" alt="..." class="position-relative z-index-9 w-150px">
                                 </div>
                                 <div class="position-relative service-content">

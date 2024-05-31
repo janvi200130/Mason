@@ -95,7 +95,7 @@ class HomeController extends CI_Controller
 		$this->db->where('id', 1);
 		$data['settings'] = $this->db->get('website_settings')->row_array();
 
-		$this->load->view('fronten,$datad/terms', $data);
+		$this->load->view('frontend/terms', $data);
 	}
 	public function privacy()
 	{
