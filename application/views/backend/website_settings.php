@@ -98,9 +98,12 @@
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" id="inputExperience" placeholder="Experience" disabled>
+												<!-- <textarea class="form-control" id="inputExperience" placeholder="Experience" disabled>
 												<?= $record->address ?>
-												</textarea>
+												</textarea> -->
+												<p class="form-control">
+												<?= $record->address ?>
+												</p>
 											</div>
 										</div>
 									

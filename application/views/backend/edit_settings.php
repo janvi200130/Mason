@@ -85,7 +85,7 @@
 										<div class="form-group row">
 											<label for="inputExperience" class="col-sm-2 col-form-label">Address</label>
 											<div class="col-sm-10">
-												<textarea class="form-control" name="address" id="inputExperience" placeholder="Experience">
+												<textarea class="form-control textarea" name="address" id="inputExperience" placeholder="Experience">
 												 <?= $record->name ?>
 												</textarea>
 											</div>
@@ -146,6 +146,12 @@
 		<aside class="control-sidebar control-sidebar-dark"></aside>
 	</div>
 	<?php include('layouts/footer.php') ?>
+	<script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote()
+  })
+</script>
 </body>
 
 </html>

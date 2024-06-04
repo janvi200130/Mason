@@ -335,4 +335,27 @@ class AdminController extends CI_Controller
 		$this->session->set_flashdata('success', 'Faq deleted successfully');
 		redirect(base_url('admin/faq'));
 	}
+
+
+	public function addService()
+	{
+		$this->load->view('backend/add_service');
+	}
+
+
+	public function services()
+	{
+		$table = 'services';
+		$data['records'] = $this->Admin_model->getAllRecords($table);
+
+		$this->load->view('backend/services', $data);
+	}
+
+
+	public function editService($id)
+	{
+
+		$this->load->view('backend/edit_service');
+
+	}
 }

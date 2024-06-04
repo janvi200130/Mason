@@ -113,14 +113,14 @@
 					</li>
 
 					<li class="nav-item has-treeview">
-						<a href="#" class="nav-link">
+						<a href="<?= base_url('admin/services') ?>" class="nav-link">
 							<i class="nav-icon fas fa-chart-pie"></i>
 							<p>
 								Service
-								<i class="right fas fa-angle-left"></i>
+							
 							</p>
 						</a>
-						<ul class="nav nav-treeview">
+						<!-- <ul class="nav nav-treeview">
 							<li class="nav-item">
 								<a href="<?= base_url('admin/add-service') ?>" class="nav-link">
 									<i class="far fa-circle nav-icon"></i>
@@ -134,7 +134,7 @@
 								</a>
 							</li>
 
-						</ul>
+						</ul> -->
 					</li>
 
 

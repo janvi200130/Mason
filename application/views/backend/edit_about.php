@@ -105,7 +105,12 @@
 
 	<?php include('layouts/footer.php') ?>
 
-
+	<script>
+  $(function () {
+    // Summernote
+    $('textarea').summernote()
+  })
+</script>
 
 </body>
 

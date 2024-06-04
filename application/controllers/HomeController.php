@@ -42,7 +42,7 @@ class HomeController extends CI_Controller
 		$this->db->where('id', 1);
 		$data['settings'] = $this->db->get('website_settings')->row_array();
 
-		$this->load->view('frontend/technology');
+		$this->load->view('frontend/technology',$data);
 	}
 
 	public function manufacturing()
@@ -51,7 +51,7 @@ class HomeController extends CI_Controller
 		$this->db->where('id', 1);
 		$data['settings'] = $this->db->get('website_settings')->row_array();
 
-		$this->load->view('frontend/manufacturing');
+		$this->load->view('frontend/manufacturing',$data);
 	}
 
 	public function sales()

@@ -42,6 +42,11 @@ $route['admin/updateAbout']='AdminController/updateAbout';
 $route['admin/profile']='AdminController/profile';
 
 
+// services
+$route['admin/add-service']='AdminController/addService';
+$route['admin/services']='AdminController/services';
+$route['admin/editService/(:any)']='AdminController/editService/$1';
+
 
 // faq
 $route['admin/add-faq']='AdminController/add_faq';
